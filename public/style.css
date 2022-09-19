@@ -1,0 +1,76 @@
+body{
+    background-color: #eee;
+}
+
+nav{
+    border-bottom: 1px solid #ddd;
+}
+
+nav .navbar-nav a:hover{
+    text-decoration: underline;
+}
+
+.list {
+    border-left: 8px solid red;
+    border-right: 8px solid red;
+    
+}
+
+.list:hover{
+    border-left: 8px solid #cd2280;
+    border-right: 8px solid #cd2280;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+footer{
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    padding: 40px 0;
+
+}
+
+form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input{
+    height: 50px;
+}
+form textarea{
+    height: 120px;
+}
+
+.delete{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: red;
+    max-width: 85px;
+    color: white;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid red;
+    text-align: center;
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+
+.card-details {
+    border: 2px solid red;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.notfound h1{
+    font-size: 80px;
+}
+.notfound p{
+    font-size: 20px;
+}
+
+nav img{
+    max-width: 500px;
+}

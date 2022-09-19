@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/nav.ejs') %> 
+    <div class="text-center text-danger my-5">
+        <h2>Movie Details</h2>
+    </div>
+    <section class="container-sm my-5">
+        <div class="card p-5 card-details">
+            <h3 class="text-danger"><%= movie.title %> </h3>
+            <p class="text-danger"><%= movie.author %> </p>
+            <p><%= movie.body %> </p>
+            <p class="text-muted"><%= movie.createdAt %> </p>
+            <a data-doc="<%= movie._id %>" href="/movie" class="delete">Delete</a>
+        </div>
+    </section>
+
+    <div class="container-sm my-5">
+        <h2>Comments</h2>
+        <div>
+            <form action="/comments" method="POST">
+                <input type="email" name="email" id="email" class="form-control my-2" placeholder="Email">
+                <label for="comment" class="text-muted">Comment</label>
+                <textarea class="form-control my-2" name="comment" id="comment" required></textarea> 
+                <button class="btn btn-danger my-2">Add comment</button>   
+            </form>
+        </div>
+    </div>
+    
+    <%- include('../partials/footer.ejs') %> 
+    
+    <script>
+        const removeBtn = document.querySelector('a.delete')
+        removeBtn.addEventListener('click', e => {
+            const endpoint = `/movie/${removeBtn.dataset.doc}`
+            fetch(endpoint, {
+                method: 'DELETE',
+            })
+            .then(response => response.json())
+            .then(data = window.location.href = data.redirect)
+            .catch(err => console.log(err))
+        })
+    </script>
+</body>.
+</html>

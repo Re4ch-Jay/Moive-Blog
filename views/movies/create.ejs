@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/nav.ejs') %> 
+    <div class="container text-center mt-5">
+        <h1 class="title text-danger">Add a new book</h1>
+    </div>
+    <div class="container-sm">
+        <form action="/movie" method="POST">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" id="author" name="author" required>
+            </div>
+            <div class="mb-3">
+                <label for="body" class="form-label">Body</label>
+                <textarea class="form-control" id="body" name="body" required></textarea>           
+            </div>
+            <button type="submit" class="btn btn-danger">Add Movie</button>
+          </form>
+    </div>
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

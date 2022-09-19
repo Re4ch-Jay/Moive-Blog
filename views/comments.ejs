@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class=" container text-center mt-5">
+        <div>
+            <% if(comments.length > 0) { %>
+                <%comments.forEach(comment => { %>
+                    <a href="/comments/<%= comment._id %> " style="text-decoration: none;">
+                        <div class="card my-5 p-3 list">
+                            <h3 class="text-danger">Email: <%= comment.email %> </h3>
+                            <h6 class="text-muted">Comment: <%= comment.body %> </h6>
+                            <p class="text-muted">Posted: <%= comment.createdAt %> </p>
+                        </div>
+                    </a>
+                <% })  %> 
+            <%}else{ %>
+                <h3 class="py-5 text-center">There is no comments right now</h3>
+            <% } %> 
+            </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>
