@@ -74,3 +74,10 @@ form textarea{
 nav img{
     max-width: 500px;
 }
+
+.error{
+    color: red;
+}
+.btn{
+    border-radius: 10px;
+}

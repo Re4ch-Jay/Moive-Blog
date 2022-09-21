@@ -6,6 +6,9 @@
     <div class=" container mt-5">
         <h1 class="title text-danger fw-bold text-center">All Movies</h1>
         <div>
+            <a class="delete" href="/movie/create">Post a Movie Blog</a>
+        </div>
+        <div>
         <% if(movies.length > 0) { %>
             <%movies.forEach(movie => { %>
                 <a href="/movie/<%= movie._id %> " style="text-decoration: none;">
